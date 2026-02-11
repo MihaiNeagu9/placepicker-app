@@ -16,6 +16,8 @@ A side effect is a piece of code that does not influence the rendering process o
 
 I don't always have to use useEffect for a side effect. It is recommended to use useEffect when the code is asynchronous, executing later than the rest of the code. If the code runs instantly, there is no need to use useEffect (localStorage to fetch data).
 
+Dependencies (the second parameter of useEffect) are used when I want to run the piece of code inside the function based on a value that changes (open state).
+
 ---
 
 ## 🖼️ Screenshots
