@@ -12,7 +12,7 @@ This project is part of React Bootcamp. The main goal is to practice and underst
 ---
 
 ## 📚 What I Learned
-Not yet added... 
+A side effect is a piece of code that does not influence the rendering process of the respective component. An example of a side effect is trying to get the user's location. I tried to do this with the getCurrentPosition function to sort the places in the application in ascending order according to the user's location. I used the useEffect() hook because the piece of code for locating the user did not affect the App component and to avoid an infinite loop caused by updating the state. 
 
 ---
 
