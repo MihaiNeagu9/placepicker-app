@@ -28,16 +28,19 @@ Screenshots coming soon...
 
 ## ⚙️ Features
 - Displays a list of available places and a list of selected places
-- Lets the user pick a place from the available list and adds it to the personal list
-- Prevents adding the same place twice
-- Allows initiating removal of a selected place (opens a confirmation modal)
-- On confirm, removes the place from the personal list; on cancel, closes the modal without changes
+- Lets the user pick a place and add it to the personal list
+- Prevents duplicates
+- Opens a confirmation modal before deleting a selected place
+- Auto-delete: if the user does nothing for 3 seconds, the selected place is removed automatically
+- Cancel closes the modal without changes
 
 ---
 
 ## 🧩 Concepts Practiced
-- Side Effects
-- Dependencies
+- Side Effects (`useEffect`)
+- Effect cleanup
+- Dependency arrays
+- Timers (`setTimeout`)
 
 ---
 
@@ -57,6 +60,7 @@ Screenshots coming soon...
 ├─ src/
 │  ├─ assets/                   # Image assets used in the UI
 │  ├─ components/
+│  │  ├─ ProgressBar.jsx        # Reusable progress bar component
 │  │  ├─ DeleteConfirmation.jsx # Confirmation UI for deleting a selected place
 │  │  ├─ Modal.jsx              # Reusable modal component (imperative open/close)
 │  │  └─ Places.jsx             # Places list with selection handling + fallback text
@@ -75,7 +79,9 @@ Screenshots coming soon...
 ---
 
 ## 🔮 Possible Improvements
-Not yet added...
+- Add tests for auto-delete timer and cleanup
+- Replace timers with a visible countdown
+- Improve accessibility on the modal
 
 ---
 
